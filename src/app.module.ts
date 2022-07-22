@@ -10,7 +10,7 @@ import 'dotenv/config';
     NotificationsModule,
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.office365.com',
+        host: 'email-smtp.us-east-1.amazonaws.com',
         port: 587,
         secure: false,
         tls: {
@@ -22,20 +22,6 @@ import 'dotenv/config';
         },
       },
     }),
-    // MailerModule.forRoot({
-    //   transport: {
-    //     host: 'email-smtp.us-east-1.amazonaws.com',
-    //     port: 587,
-    //     secure: false,
-    //     tls: {
-    //       ciphers: 'SSLv3',
-    //     },
-    //     auth: {
-    //       user: process.env.USER_SMTP,
-    //       pass: process.env.PASSWORD_SMTP,
-    //     },
-    //   },
-    // }),
   ],
   controllers: [],
   providers: [],
